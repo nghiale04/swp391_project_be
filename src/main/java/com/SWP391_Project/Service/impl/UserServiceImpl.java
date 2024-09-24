@@ -37,6 +37,7 @@ public class UserServiceImpl implements UserService {
                 .phoneNumber(userRegisterDTO.getPhoneNumber())
                 .password(userRegisterDTO.getPassword())
                 .email(userRegisterDTO.getEmail())
+                .address(userRegisterDTO.getAddress())
                 .build();
         newUser.setRole(Role.USER);
         String password = userRegisterDTO.getPassword();

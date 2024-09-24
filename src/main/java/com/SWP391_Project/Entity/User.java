@@ -45,10 +45,12 @@ public class User implements UserDetails {
     @Column(name="email",unique =true)
     String email;
 
+    @Column(name ="address", nullable = false)
+    String address;
+
     @Enumerated(EnumType.STRING)
     @Column(name="role")
     Role role;
-
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

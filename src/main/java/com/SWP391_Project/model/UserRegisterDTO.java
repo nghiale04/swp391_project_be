@@ -10,21 +10,25 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserRegisterDTO {
-    @JsonProperty("fristName")
+    @JsonProperty("first_name")
     private String firstName;
 
-    @JsonProperty("lastName")
+    @JsonProperty("last_name")
     private String lastName;
 
-    @JsonProperty("phoneNumber")
+    @JsonProperty("phone_number")
     @NotBlank(message = "Phone number is required")
     private String phoneNumber;
 
+    @JsonProperty("password")
     @NotBlank(message = "Password can not be blank")
     private String password;
 
-    @JsonProperty("retypePassword")
+    @JsonProperty("retype_password")
     private String retypePassword;
+
+    @JsonProperty("address")
+    private String address;
 
     @NotBlank(message = "Email can not be blank")
     private String email;

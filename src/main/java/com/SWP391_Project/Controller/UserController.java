@@ -21,6 +21,7 @@ public class UserController {
     private UserService userService;
     @PostMapping("/register")
         public ResponseEntity register(@RequestBody UserRegisterDTO userRegisterDTO) throws Exception {
+        System.out.println(userRegisterDTO);
        try {
            if(!userRegisterDTO.getPassword().equals(userRegisterDTO.getRetypePassword())){
                return ResponseEntity.badRequest().body("Password not match");
